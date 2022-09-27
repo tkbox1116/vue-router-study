@@ -39,7 +39,9 @@ const navList = ref([
     <div class="l-container">
       <div class="l-header__wrap">
         <div class="p-header__info">
-          <h1 class="p-header__title"><a href="/" class="p-logo">Logo</a></h1>
+          <h1 class="p-header__title">
+            <RouterLink to="/" class="p-logo">Logo</RouterLink>
+          </h1>
         </div>
 
         <!-- /.p-header__info -->
@@ -92,11 +94,28 @@ const navList = ref([
     <!-- /.p-header__inner -->
   </header>
   <!-- <transition name="fade" mode="out-in"> -->
+
   <RouterView />
+
   <!-- </transition> -->
 </template>
 
 <style>
+.wrapper {
+  color: red;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  /* opacity: 0; */
+  margin: auto 0;
+  background-color: rgb(158, 187, 218);
+  transition: all 0.2s ease-out;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: 1s ease all;

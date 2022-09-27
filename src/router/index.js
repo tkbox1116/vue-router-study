@@ -1,5 +1,6 @@
-import { createRouter, createWebHistory, onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import gsap from 'gsap';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,26 @@ const router = createRouter({
       component: () => import('../views/ProfileView.vue')
     }
   ]
+});
+
+router.beforeEach((to, from, next) => {
+  const tl = gsap.timeline();
+  tl.to('.wrapper', {
+    duration: 0.8,
+    opacity: 1,
+    zIndex: 100,
+    onComplete: () => {
+      next();
+    }
+  }).to(
+    '.wrapper',
+    {
+      duration: 1,
+      opacity: 0,
+      zIndex: 0
+    },
+    1.25
+  );
 });
 
 export default router;

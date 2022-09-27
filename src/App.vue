@@ -4,14 +4,13 @@ import HelloWorld from './components/HelloWorld.vue';
 import Header from './components/Header.vue';
 import { reactive, ref } from 'vue';
 import { computed } from '@vue/reactivity';
-import Color from './components/Color.vue';
 
 // let isDrawerActive = ref(false);
 </script>
 
 <template>
   <Header />
-  <Color />
+  <div class="wrapper"></div>
 </template>
 
 <style scoped>
