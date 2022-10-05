@@ -1,6 +1,6 @@
 @charset 'UTF-8';
-@use "../../inc" as *;
-@forward "hamburger";
+@use '../../inc' as *;
+@forward 'hamburger';
 /*
   Global Nav
 */
@@ -73,7 +73,7 @@ $right: 0;
   & a {
     display: block;
     padding: 0.75rem 1.5rem;
-    color: $colorMain;
+    color: $primary-text-color;
     text-decoration: none;
     font-size: 1.25rem;
 
@@ -83,16 +83,16 @@ $right: 0;
       padding: 1rem;
       text-decoration: none;
       overflow: hidden;
-      color: $colorMain;
+      color: $primary-text-color;
       font-weight: bold;
 
-      &:hover {
-        background-color: $colorMain;
-        color: inherit;
-      }
+      // &:hover {
+      //   background-color: $primary-text-color;
+      //   color: inherit;
+      // }
 
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         z-index: 2;
         left: 0;
@@ -105,16 +105,16 @@ $right: 0;
         transform-origin: right top;
       }
 
-      &:hover:after {
-        transform-origin: left top;
-        transform: scale(1, 1);
-      }
+      // &:hover:after {
+      //   transform-origin: left top;
+      //   transform: scale(1, 1);
+      // }
     }
 
-    &:hover {
-      background-color: #1a2327;
-      color: #fff;
-    }
+    // &:hover {
+    //   background-color: #1a2327;
+    //   color: #fff;
+    // }
   }
 }
 .is-drawerActive .p-globalNav {

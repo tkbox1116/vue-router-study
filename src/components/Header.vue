@@ -25,11 +25,11 @@ const testClass = computed(() => ({
 const navList = ref([
   {
     to: '/',
-    text: 'home'
+    text: 'Home'
   },
   {
     to: '/about',
-    text: 'about me'
+    text: 'About'
   }
 ]);
 </script>
@@ -40,7 +40,7 @@ const navList = ref([
       <div class="l-header__wrap">
         <div class="p-header__info">
           <h1 class="p-header__title">
-            <RouterLink to="/" class="p-logo">Logo</RouterLink>
+            <RouterLink to="/" class="p-logo">LOGO</RouterLink>
           </h1>
         </div>
 
@@ -101,21 +101,6 @@ const navList = ref([
 </template>
 
 <style>
-.wrapper {
-  color: red;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  /* opacity: 0; */
-  margin: auto 0;
-  background-color: rgb(158, 187, 218);
-  transition: all 0.2s ease-out;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: 1s ease all;

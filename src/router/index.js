@@ -38,20 +38,31 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const tl = gsap.timeline();
   tl.to('.wrapper', {
-    duration: 0.8,
-    opacity: 1,
+    // active状態
+    duration: 0.85,
     zIndex: 100,
+    transformOrigin: 'center bottom',
+    scaleY: 1,
+    scaleX: 1,
+    ease: 'Expo.easeInOut',
     onComplete: () => {
-      next();
+      // アニメーション開始時間までの時間を確保
+      setTimeout(() => {
+        next();
+      }, 100);
     }
   }).to(
     '.wrapper',
     {
-      duration: 1,
-      opacity: 0,
-      zIndex: 0
+      // 通常状態
+      duration: 0.85,
+      scaleY: 0,
+      scaleX: 1,
+      transformOrigin: 'center top',
+      ease: 'Expo.easeInOut'
     },
-    1.25
+    // 次のアニメーションが始まるまでの時間
+    1
   );
 });
 

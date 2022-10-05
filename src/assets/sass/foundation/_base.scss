@@ -2,8 +2,8 @@
 // @use "../inc/setting" as *;
 // @use "../inc/color-book" as *;
 // @use "../inc/mixin" as *;
-@use "../inc" as *;
-@use "sass:math";
+@use '../inc' as *;
+@use 'sass:math';
 
 /*
   Base
@@ -31,9 +31,9 @@ body {
   color: $primary-text-color;
   text-rendering: optimizeLegibility;
   font: math.div(#{set-size($base)}, 1.75) $font-set-primary; //$baseでスマホのサイズ指定 line-height指定
-  -webkit-font-feature-settings: "pkna";
-  font-feature-settings: "pkna";
-  background-color: $colorBase;
+  -webkit-font-feature-settings: 'pkna';
+  font-feature-settings: 'pkna';
+  background-color: $colorLightGray;
   padding-top: set-size(48px);
 
   @include mq(md) {
